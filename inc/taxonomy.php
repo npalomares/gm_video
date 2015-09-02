@@ -1,44 +1,17 @@
 <?
-function sealfit_videos_init() {
+function weekly_rap_videos_init() {
 	register_taxonomy(
-		'Weekly Workouts',
+		'Weekly Rap',
 		'video',
 		array(
-			'label' => __( 'Weekly Workouts' ),
+			'label' => __( 'Weekly Rap Video' ),
 			'rewrite' => array( 
-				'slug' => 'weekly-workouts',
+				'slug' => 'weekly-rap',
 				'show_ui' => true,
 			),
 			'hierarchical' => true,
 		)
 	);
-	
-	register_taxonomy(
-		'Training',
-		'video',
-		array(
-			'label' => __( 'Training' ),
-			'rewrite' => array( 
-				'slug' => 'training',
-				'show_ui' => true,
-			),
-			'hierarchical' => true,
-		)
-	);
-
-	register_taxonomy(
-		'Events',
-		'video',
-		array(
-			'label' => __( 'Events' ),
-			'rewrite' => array( 
-				'slug' => 'events',
-				'show_ui' => true,
-			),
-			'hierarchical' => true,
-		)
-	);
-	
 }
-add_action( 'init', 'sealfit_videos_init' );
+add_action( 'init', 'weekly_rap_videos_init' );
 ?>

@@ -42,7 +42,7 @@ function create_video() {
 // Hook into the 'init' action
 add_action( 'init', 'create_video', 0 );
 
-  	// Custom image size for Sealfit Video Thumbs
+  	// Custom image size for Weekly Rap Video Thumbs
 	add_image_size('video-gallery-thumb', 720, 460, true);
 
 ?>

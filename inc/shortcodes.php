@@ -16,7 +16,7 @@ function gm_video_shortcode( $atts ) {
 	if($cat != "") {
 		$db_args['tax_query'] = array(
 			array(
-				'taxonomy' => 'Training',
+				'taxonomy' => 'Rap',
 				'field' => 'slug',
 				'terms' => array($cat),
 			),
