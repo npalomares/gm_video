@@ -38,14 +38,18 @@ function gm_video_shortcode( $atts ) {
 
 			$content .= '<a href="#"'.'data-toggle="modal"'.'data-target="#myModal'.get_the_id().'">'.$thumb.'</a>';
 			$content .= '<h4 class="text-center video-title"><a href="#"'.'data-toggle="modal"'.'data-target="#myModal'.get_the_id().'">'.get_the_title().'</a></h4>';
-			$content .= '</div></div>';
+			
+			// TODO - add custom field to grap and display a video description
 
 
+			$content .= '</div>'; // close video-item
+			$content .= '</div>'; // close col class
+
+			// Modal and Content
 			$content .='<div class="modal fade"'.'id="myModal'.get_the_id().'"'.'tabindex="-1"'.'role="dialog"'.'aria-lableledby="myModallabel"'.'aria-hidden="true">';
 			$content .='<div class="modal-dialog">';
 			$content .='<div class="modal-content">';
 			
-
 			$content .='<div class="modal-header">';
 			$content .='<a href="#"'.'class="btn close close-btn"'.'data-dismiss="modal">'."close".'</a>';
 			$content .='<h4 class="modal-title">'.get_the_title().'</h4>';
