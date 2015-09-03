@@ -7,7 +7,7 @@ function gm_video_shortcode( $atts ) {
 	
 	$db_args = array(
 		'post_type' => 'video',
-		'order' => 'ASC',
+		'order' => 'DESC',
 		'orderby' => $orderby,
 		'posts_per_page' => -1,
 		'meta_key' => '_thumbnail_id'
@@ -40,7 +40,7 @@ function gm_video_shortcode( $atts ) {
 			$content .= '<h4 class="text-center video-title"><a href="#"'.'data-toggle="modal"'.'data-target="#myModal'.get_the_id().'">'.get_the_title().'</a></h4>';
 			
 			// TODO - add custom field to grap and display a video description
-
+			$content .= '<p>'.get_the_excerpt().'</p>';
 
 			$content .= '</div>'; // close video-item
 			$content .= '</div>'; // close col class
